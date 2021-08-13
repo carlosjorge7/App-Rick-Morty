@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Character</ion-title>
+    <ion-button slot="start">
+      <ion-back-button  defaultHref="usuarios"></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-grid>
+   <ion-row>
+     <ion-col sizeMd="4" offsetMd="4">
+      <div *ngIf="item">
+        <ion-card>
+          <ion-card-content>
+            <img src="{{item.image}}" alt="">
+            <ion-card-title class="ion-text-center">
+              {{item.name}}
+            </ion-card-title>
+            <div>
+              Status: {{item.status}} <br>
+              Specie: {{item.species}} <br>
+              Gender: {{item.gender}} <br>
+              Appear in {{item.episode.length}} episodes
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+</ion-content>
